@@ -1,0 +1,25 @@
+# Template information section
+name: viper
+summary: Template based on Viper Architecture
+author: Zell Bakalli
+version: 1.0.0
+license: MIT
+
+# The declarations for code files
+code_files:
+
+- {name: ModuleConfigurator.swift, path: Code/configurator.swift.liquid}
+
+- {name: Business Logic/Interactor.swift, path: Code/interactor.swift.liquid}
+- {name: Business Logic/InteractorInput.swift, path: Code/interactor_input.swift.liquid}
+- {name: Business Logic/InteractorOutput.swift, path: Code/interactor_output.swift.liquid}
+
+- {name: User Interface/Wireframe/Wireframe.swift, path: Code/wireframe.swift.liquid}
+
+- {name: User Interface/Presenter/Presenter.swift, path: Code/presenter.swift.liquid}
+- {name: User Interface/Presenter/ModuleInteface.swift, path: Code/module_interface.swift.liquid}
+
+
+- {name: User Interface/View/ViewController.swift, path: Code/viewcontroller.swift.liquid}
+- {name: User Interface/View/ViewInterface.swift, path: Code/view_interface.swift.liquid}
+- {name: User Interface/View/Storyboard.storyboard, path: Code/view_storyboard.storyboard.liquid}

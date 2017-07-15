@@ -1,0 +1,36 @@
+### Headers settings
+company: Ard Stavileci
+
+### Xcode project settings
+project_name: Kurrency
+xcodeproj_path: Kurrency.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: Kurrency
+
+# The file path for new modules
+project_file_path: Kurrency/Modules
+
+# The Xcode group path to new modules
+project_group_path: Kurrency/Modules
+
+### Tests generation settings section
+# The tests target name
+test_target: KurrencyTests
+
+# The file path for new tests
+test_file_path: Kurrency/Modules
+
+# The Xcode group path to new tests
+test_group_path: Kurrency/Modules
+
+### Dependencies settings section
+podfile_path: Podfile
+
+catalogs:
+- 'https://github.com/zellb/templates.git'
+
+templates:
+- {name: viper}
+- {name: simplified-viper}

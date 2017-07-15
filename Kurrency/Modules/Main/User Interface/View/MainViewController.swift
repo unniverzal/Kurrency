@@ -1,0 +1,18 @@
+//
+//  MainMainViewController.swift
+//  Kurrency
+//
+//  Created by Ard Stavileci on 15/07/2017.
+//  Copyright © 2017 Ard Stavileci. All rights reserved.
+//
+
+import UIKit
+
+class MainViewController: UIViewController, MainViewInterface {
+
+    var eventHandler: MainModuleInterface!
+
+    override func viewDidLoad() {
+
+    }
+}

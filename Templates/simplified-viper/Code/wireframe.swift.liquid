@@ -1,0 +1,37 @@
+//
+//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+protocol {{ module_info.name }}Router : class{
+
+}
+
+class {{ module_info.name }}Wireframe: {{ module_info.name }}Router{
+
+    weak var presentedViewController : {{ module_info.name }}ViewController?
+    weak var presenter : {{ module_info.name }}Presenter!
+
+    func getViewController()-> UIViewController{
+        let viewController = viewControllerFromStoryboard()
+        viewController.eventHandler = presenter
+        self.presentedViewController = viewController
+        self.presenter.viewController = viewController
+        return viewController
+    }
+    
+    private func viewControllerFromStoryboard() -> {{ module_info.name }}ViewController{
+        
+        let storyboard = UIStoryboard(name: "{{ module_info.name }}Storyboard", bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: "{{ module_info.name }}") as! {{ module_info.name }}ViewController
+    }
+
+    deinit{
+        print("{{ module_info.name }}Wireframe DEINIT")
+    }
+}

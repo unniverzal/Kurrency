@@ -1,0 +1,34 @@
+//
+//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+class {{ module_info.name }}ModuleConfigurator{
+    
+    static let shared = {{ module_info.name }}ModuleConfigurator()
+    
+    private init() {
+    
+    }
+    
+    func initialize() -> UIViewController {
+        
+        let wireframe = {{ module_info.name }}Wireframe()
+        let presenter = {{ module_info.name }}Presenter()
+        let interactor = {{ module_info.name }}Interactor()
+        
+        wireframe.presenter = presenter
+        
+        presenter.router = wireframe
+        presenter.interactor = interactor
+        
+        interactor.output = presenter
+
+        return wireframe.getViewController()
+    }
+}
