@@ -13,10 +13,15 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
-
+	var currencies : [Currency]!
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
+		self.window = UIWindow(frame: UIScreen.main.bounds)
+		window?.rootViewController = MainModuleConfigurator.shared.initialize()
+		window?.makeKeyAndVisible()
+		customizeApperance()
+		
 		return true
 	}
 
@@ -88,6 +93,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	        }
 	    }
 	}
-
+	
+	func customizeApperance(){
+		UINavigationBar.appearance().setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+		UINavigationBar.appearance().shadowImage = UIImage()
+		UINavigationBar.appearance().isTranslucent = true
+		UINavigationBar.appearance().titleTextAttributes = [
+			NSForegroundColorAttributeName : UIColor.white
+		]
+		UINavigationBar.appearance().tintColor = UIColor.white
+	}
 }
 

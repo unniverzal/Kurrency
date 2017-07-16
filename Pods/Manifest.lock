@@ -1,3 +1,36 @@
-PODFILE CHECKSUM: d30b2e364ea4b48a32139204bea1c28a2152f9a0
+PODS:
+  - Alamofire (4.5.0)
+  - AlamofireObjectMapper (4.1.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 2.0)
+  - BRYXBanner (0.6):
+    - BRYXBanner/Core (= 0.6)
+  - BRYXBanner/Core (0.6)
+  - ObjectMapper (2.2.7)
+  - SwiftSiriWaveformView (2.1.0)
+
+DEPENDENCIES:
+  - AlamofireObjectMapper (~> 4.0)
+  - BRYXBanner (from `https://github.com/bryx-inc/BRYXBanner.git`, branch `swift3`)
+  - SwiftSiriWaveformView
+
+EXTERNAL SOURCES:
+  BRYXBanner:
+    :branch: swift3
+    :git: https://github.com/bryx-inc/BRYXBanner.git
+
+CHECKOUT OPTIONS:
+  BRYXBanner:
+    :commit: 2829e2104637d1ea69373020d9005a571b93bcd7
+    :git: https://github.com/bryx-inc/BRYXBanner.git
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
+  BRYXBanner: 42309d45bcc040a36e2b176bde727a8198b16576
+  ObjectMapper: 65abcfd9a61cf7396cbd14a4fb22fddfcc46577e
+  SwiftSiriWaveformView: 240c8b41d0350a97b0a5de1ee3f3ab5255496580
+
+PODFILE CHECKSUM: d2d8fbbe2110bfc1e4703cc07c026764a6d08902
 
 COCOAPODS: 1.2.1

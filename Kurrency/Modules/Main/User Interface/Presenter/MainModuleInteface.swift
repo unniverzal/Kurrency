@@ -7,7 +7,8 @@
 //
 
 protocol MainModuleInterface: class {
-
+	
+	func getStartedButtonTapped()
 }
 
 extension MainModuleInterface where Self:MainPresenter{

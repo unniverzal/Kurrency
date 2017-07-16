@@ -12,5 +12,10 @@ class MainPresenter: MainModuleInterface, MainInteractorOutput {
     weak var viewController : UIViewController!
     var interactor: MainInteractorInput!
     var router: MainRouter!
+	
+	func getStartedButtonTapped(){
+		router.presentConvertCurrencyViewController()
+	}
+	
 
 }

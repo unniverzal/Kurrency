@@ -7,7 +7,6 @@
 //
 
 class MainInteractor: MainInteractorInput {
-
-    weak var output: MainInteractorOutput!
-
+	
+	weak var output: MainInteractorOutput!
 }

@@ -1,30 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--TITLE-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="Main" title="Main" id="BYZ-38-t0r" customClass="MainViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" id="BYZ-38-t0r" customClass="MainViewController" customModule="Kurrency" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="BackgroundGradientView" customModule="Kurrency" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="3rY-3s-fuv">
+                                <rect key="frame" x="96" y="163" width="128" height="128"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ack-Mq-My2">
+                                <rect key="frame" x="36" y="309" width="248" height="78"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kurrency " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hat-Gd-fdp">
+                                        <rect key="frame" x="67" y="8" width="114.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy Exchange" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6I-17-pFT">
+                                        <rect key="frame" x="56.5" y="46" width="136" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="hat-Gd-fdp" firstAttribute="top" secondItem="ack-Mq-My2" secondAttribute="top" constant="8" id="2dZ-hx-Jdc"/>
+                                    <constraint firstAttribute="bottom" secondItem="Z6I-17-pFT" secondAttribute="bottom" constant="8" id="Alu-OJ-u95"/>
+                                    <constraint firstItem="Z6I-17-pFT" firstAttribute="top" secondItem="hat-Gd-fdp" secondAttribute="bottom" constant="8" id="E2S-qD-Eak"/>
+                                    <constraint firstItem="Z6I-17-pFT" firstAttribute="centerX" secondItem="ack-Mq-My2" secondAttribute="centerX" id="FpE-5j-M3U"/>
+                                    <constraint firstItem="hat-Gd-fdp" firstAttribute="centerX" secondItem="ack-Mq-My2" secondAttribute="centerX" id="b1K-sr-lJV"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbi-dc-pBB" customClass="SwiftSiriWaveformView" customModule="SwiftSiriWaveformView">
+                                <rect key="frame" x="0.0" y="454" width="320" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="rVc-vg-Nif"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="waveColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfWaves">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Oz-Mx-0M5">
+                                <rect key="frame" x="0.0" y="504" width="320" height="64"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="LmH-yb-8rr"/>
+                                </constraints>
+                                <state key="normal" title="Get Started">
+                                    <color key="titleColor" red="0.21176470588235294" green="0.78823529411764703" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getStartedButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lnr-sG-DCm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.22352941176470587" green="0.69411764705882351" blue="0.99960476160049438" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ack-Mq-My2" firstAttribute="top" secondItem="3rY-3s-fuv" secondAttribute="bottom" constant="18" id="0WX-Mz-6P2"/>
+                            <constraint firstAttribute="trailing" secondItem="0Oz-Mx-0M5" secondAttribute="trailing" id="2LD-Y3-BeT"/>
+                            <constraint firstItem="0Oz-Mx-0M5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2ne-9H-loB"/>
+                            <constraint firstItem="3rY-3s-fuv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Zt-wP-jpk"/>
+                            <constraint firstAttribute="trailing" secondItem="sbi-dc-pBB" secondAttribute="trailing" id="7wz-Ss-nUP"/>
+                            <constraint firstItem="ack-Mq-My2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="GmV-JQ-uQj"/>
+                            <constraint firstItem="3rY-3s-fuv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.8" id="Ixw-ZD-2lg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0Oz-Mx-0M5" secondAttribute="bottom" id="JSs-OX-1ko"/>
+                            <constraint firstItem="sbi-dc-pBB" firstAttribute="centerY" secondItem="0Oz-Mx-0M5" secondAttribute="top" id="SfC-Da-elf"/>
+                            <constraint firstItem="sbi-dc-pBB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fWr-GE-6lg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ack-Mq-My2" secondAttribute="trailing" constant="20" id="omR-12-9eI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="waterWaveAnimationView" destination="sbi-dc-pBB" id="XXv-Np-Xs5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="84" y="37.331334332833585"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Logo" width="128" height="128"/>
+    </resources>
 </document>
