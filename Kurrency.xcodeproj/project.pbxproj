@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		011A1EAB157934C2ADFD5CAB /* Pods_KurrencyWatch_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65ACD736154C9F6952D6F265 /* Pods_KurrencyWatch_Extension.framework */; };
 		140198537AAB44CDE5FE5FF7 /* CurrencyConverterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC51763FE9F3E0596EBC861 /* CurrencyConverterPresenter.swift */; };
 		23F18BAE17F49E61D031A378 /* CurrencyConverterModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ACD10C1687209454B42F18 /* CurrencyConverterModuleConfigurator.swift */; };
 		2B52F79A98951603BBB737F1 /* CurrencyConverterStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F838C8C865D88CF78AB735E /* CurrencyConverterStoryboard.storyboard */; };
@@ -24,6 +25,21 @@
 		9475BE391F1BCD3F0017EF54 /* CurrenciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9475BE381F1BCD3F0017EF54 /* CurrenciesViewController.swift */; };
 		9475BE3B1F1BD46D0017EF54 /* CurrenciesViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9475BE3A1F1BD46D0017EF54 /* CurrenciesViewInterface.swift */; };
 		9475BE3E1F1BE5170017EF54 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9475BE3D1F1BE5170017EF54 /* Utils.swift */; };
+		947BFE3B1F1D442E00FBC6A2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F4D4101F1B923500481C2B /* NetworkService.swift */; };
+		947BFE3C1F1D485300FBC6A2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9475BE351F1BCBDC0017EF54 /* Constants.swift */; };
+		947BFE3F1F1D488100FBC6A2 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F4D4141F1BA2E600481C2B /* Result.swift */; };
+		947BFE411F1D590F00FBC6A2 /* ConvertedCurrencyRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947BFE401F1D590F00FBC6A2 /* ConvertedCurrencyRowController.swift */; };
+		947BFE431F1D5C2200FBC6A2 /* ConvertedCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947BFE421F1D5C2200FBC6A2 /* ConvertedCurrency.swift */; };
+		947BFE461F1D6AA900FBC6A2 /* MessageBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947BFE451F1D6AA900FBC6A2 /* MessageBanner.swift */; };
+		947BFE471F1D6AD400FBC6A2 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9475BE3D1F1BE5170017EF54 /* Utils.swift */; };
+		94F27A4A1F1C0CAB004256EE /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94F27A481F1C0CAB004256EE /* Interface.storyboard */; };
+		94F27A4C1F1C0CAB004256EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94F27A4B1F1C0CAB004256EE /* Assets.xcassets */; };
+		94F27A531F1C0CAC004256EE /* KurrencyWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 94F27A521F1C0CAC004256EE /* KurrencyWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		94F27A5A1F1C0CAC004256EE /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F27A591F1C0CAC004256EE /* InterfaceController.swift */; };
+		94F27A5C1F1C0CAC004256EE /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F27A5B1F1C0CAC004256EE /* ExtensionDelegate.swift */; };
+		94F27A5E1F1C0CAC004256EE /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F27A5D1F1C0CAC004256EE /* NotificationController.swift */; };
+		94F27A601F1C0CAC004256EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94F27A5F1F1C0CAC004256EE /* Assets.xcassets */; };
+		94F27A641F1C0CAC004256EE /* KurrencyWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 94F27A461F1C0CAB004256EE /* KurrencyWatch.app */; };
 		94F4D3D71F1A2EE100481C2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F4D3D61F1A2EE100481C2B /* AppDelegate.swift */; };
 		94F4D3DF1F1A2EE100481C2B /* Kurrency.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 94F4D3DD1F1A2EE100481C2B /* Kurrency.xcdatamodeld */; };
 		94F4D3E11F1A2EE100481C2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94F4D3E01F1A2EE100481C2B /* Assets.xcassets */; };
@@ -48,6 +64,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		94F27A541F1C0CAC004256EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94F4D3CB1F1A2EE100481C2B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94F27A511F1C0CAC004256EE;
+			remoteInfo = "KurrencyWatch Extension";
+		};
+		94F27A621F1C0CAC004256EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94F4D3CB1F1A2EE100481C2B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94F27A451F1C0CAB004256EE;
+			remoteInfo = KurrencyWatch;
+		};
 		94F4D3EB1F1A2EE100481C2B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 94F4D3CB1F1A2EE100481C2B /* Project object */;
@@ -56,6 +86,31 @@
 			remoteInfo = Kurrency;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		94F27A6A1F1C0CAC004256EE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				94F27A531F1C0CAC004256EE /* KurrencyWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94F27A6C1F1C0CAC004256EE /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				94F27A641F1C0CAC004256EE /* KurrencyWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		04CB317A1E202E3A7A4C5423 /* CurrencyConverterModuleInteface.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CurrencyConverterModuleInteface.swift; sourceTree = "<group>"; };
@@ -69,8 +124,11 @@
 		36ACD10C1687209454B42F18 /* CurrencyConverterModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CurrencyConverterModuleConfigurator.swift; sourceTree = "<group>"; };
 		390671A092EECAEDF4B6F7BD /* Pods-Kurrency.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kurrency.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kurrency/Pods-Kurrency.release.xcconfig"; sourceTree = "<group>"; };
 		423F497055B54EE9F6F765E4 /* Pods_Kurrency.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kurrency.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43A2F6A991E97E1F49A22525 /* Pods-KurrencyWatch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KurrencyWatch Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KurrencyWatch Extension/Pods-KurrencyWatch Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		462A1C8929AEB02D14A463FB /* MainInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainInteractorOutput.swift; sourceTree = "<group>"; };
+		54E8B4DA12717F21A5D1146C /* Pods_KurrencyWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KurrencyWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6411F59A50B4164FF8619124 /* Pods-KurrencyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KurrencyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KurrencyTests/Pods-KurrencyTests.release.xcconfig"; sourceTree = "<group>"; };
+		65ACD736154C9F6952D6F265 /* Pods_KurrencyWatch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KurrencyWatch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		719B0B36333A2C90B78F51BE /* CurrencyConverterWireframe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CurrencyConverterWireframe.swift; sourceTree = "<group>"; };
 		77E981BFFD18B2B907FBB55E /* MainPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		9463BC2C36BB7EA3003BE093 /* CurrencyConverterViewInterface.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CurrencyConverterViewInterface.swift; sourceTree = "<group>"; };
@@ -79,6 +137,20 @@
 		9475BE381F1BCD3F0017EF54 /* CurrenciesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrenciesViewController.swift; sourceTree = "<group>"; };
 		9475BE3A1F1BD46D0017EF54 /* CurrenciesViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrenciesViewInterface.swift; sourceTree = "<group>"; };
 		9475BE3D1F1BE5170017EF54 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		947BFE401F1D590F00FBC6A2 /* ConvertedCurrencyRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertedCurrencyRowController.swift; sourceTree = "<group>"; };
+		947BFE421F1D5C2200FBC6A2 /* ConvertedCurrency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertedCurrency.swift; sourceTree = "<group>"; };
+		947BFE451F1D6AA900FBC6A2 /* MessageBanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageBanner.swift; sourceTree = "<group>"; };
+		94F27A461F1C0CAB004256EE /* KurrencyWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KurrencyWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		94F27A491F1C0CAB004256EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		94F27A4B1F1C0CAB004256EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		94F27A4D1F1C0CAB004256EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94F27A521F1C0CAC004256EE /* KurrencyWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "KurrencyWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94F27A581F1C0CAC004256EE /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		94F27A591F1C0CAC004256EE /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		94F27A5B1F1C0CAC004256EE /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		94F27A5D1F1C0CAC004256EE /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		94F27A5F1F1C0CAC004256EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		94F27A611F1C0CAC004256EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94F4D3D31F1A2EE100481C2B /* Kurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94F4D3D61F1A2EE100481C2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94F4D3DE1F1A2EE100481C2B /* Kurrency.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Kurrency.xcdatamodel; sourceTree = "<group>"; };
@@ -98,6 +170,7 @@
 		A459DC6202294D90090086BC /* MainStoryboard.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		AE97171234110A9B528666FC /* MainViewInterface.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewInterface.swift; sourceTree = "<group>"; };
 		AFF8E6491AC49DDCAC9E9618 /* CurrencyConverterInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CurrencyConverterInteractor.swift; sourceTree = "<group>"; };
+		B47E64F1B657418AB910C6BE /* Pods-KurrencyWatch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KurrencyWatch Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-KurrencyWatch Extension/Pods-KurrencyWatch Extension.release.xcconfig"; sourceTree = "<group>"; };
 		BF1D86931BE23A85B724F09D /* MainViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D1BE4F987E287DC63AEF3706 /* MainWireframe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainWireframe.swift; sourceTree = "<group>"; };
 		DEC51763FE9F3E0596EBC861 /* CurrencyConverterPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CurrencyConverterPresenter.swift; sourceTree = "<group>"; };
@@ -107,6 +180,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6BB2F5A8A2E818395C7446F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94F27A4F1F1C0CAC004256EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				011A1EAB157934C2ADFD5CAB /* Pods_KurrencyWatch_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		94F4D3D01F1A2EE100481C2B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -153,6 +241,8 @@
 				390671A092EECAEDF4B6F7BD /* Pods-Kurrency.release.xcconfig */,
 				0A1BD123E702AB475BBC89A7 /* Pods-KurrencyTests.debug.xcconfig */,
 				6411F59A50B4164FF8619124 /* Pods-KurrencyTests.release.xcconfig */,
+				43A2F6A991E97E1F49A22525 /* Pods-KurrencyWatch Extension.debug.xcconfig */,
+				B47E64F1B657418AB910C6BE /* Pods-KurrencyWatch Extension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -171,6 +261,8 @@
 			children = (
 				423F497055B54EE9F6F765E4 /* Pods_Kurrency.framework */,
 				EE7132B8EA83C02EEFF8E25C /* Pods_KurrencyTests.framework */,
+				54E8B4DA12717F21A5D1146C /* Pods_KurrencyWatch.framework */,
+				65ACD736154C9F6952D6F265 /* Pods_KurrencyWatch_Extension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -227,8 +319,42 @@
 			children = (
 				9475BE351F1BCBDC0017EF54 /* Constants.swift */,
 				9475BE3D1F1BE5170017EF54 /* Utils.swift */,
+				947BFE451F1D6AA900FBC6A2 /* MessageBanner.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		94F27A471F1C0CAB004256EE /* KurrencyWatch */ = {
+			isa = PBXGroup;
+			children = (
+				94F27A481F1C0CAB004256EE /* Interface.storyboard */,
+				94F27A4B1F1C0CAB004256EE /* Assets.xcassets */,
+				94F27A4D1F1C0CAB004256EE /* Info.plist */,
+			);
+			path = KurrencyWatch;
+			sourceTree = "<group>";
+		};
+		94F27A561F1C0CAC004256EE /* KurrencyWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				947BFE421F1D5C2200FBC6A2 /* ConvertedCurrency.swift */,
+				947BFE401F1D590F00FBC6A2 /* ConvertedCurrencyRowController.swift */,
+				94F27A591F1C0CAC004256EE /* InterfaceController.swift */,
+				94F27A5B1F1C0CAC004256EE /* ExtensionDelegate.swift */,
+				94F27A5D1F1C0CAC004256EE /* NotificationController.swift */,
+				94F27A5F1F1C0CAC004256EE /* Assets.xcassets */,
+				94F27A611F1C0CAC004256EE /* Info.plist */,
+				94F27A571F1C0CAC004256EE /* Supporting Files */,
+			);
+			path = "KurrencyWatch Extension";
+			sourceTree = "<group>";
+		};
+		94F27A571F1C0CAC004256EE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				94F27A581F1C0CAC004256EE /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		94F4D3CA1F1A2EE100481C2B = {
@@ -236,6 +362,8 @@
 			children = (
 				94F4D3D51F1A2EE100481C2B /* Kurrency */,
 				94F4D3ED1F1A2EE100481C2B /* KurrencyTests */,
+				94F27A471F1C0CAB004256EE /* KurrencyWatch */,
+				94F27A561F1C0CAC004256EE /* KurrencyWatch Extension */,
 				94F4D3D41F1A2EE100481C2B /* Products */,
 				0E5236D543C995B19A49624E /* Pods */,
 				4C83FD3465A5B5B70049A53C /* Frameworks */,
@@ -247,6 +375,8 @@
 			children = (
 				94F4D3D31F1A2EE100481C2B /* Kurrency.app */,
 				94F4D3EA1F1A2EE100481C2B /* KurrencyTests.xctest */,
+				94F27A461F1C0CAB004256EE /* KurrencyWatch.app */,
+				94F27A521F1C0CAC004256EE /* KurrencyWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -398,6 +528,44 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		94F27A451F1C0CAB004256EE /* KurrencyWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94F27A6B1F1C0CAC004256EE /* Build configuration list for PBXNativeTarget "KurrencyWatch" */;
+			buildPhases = (
+				94F27A441F1C0CAB004256EE /* Resources */,
+				94F27A6A1F1C0CAC004256EE /* Embed App Extensions */,
+				6BB2F5A8A2E818395C7446F1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94F27A551F1C0CAC004256EE /* PBXTargetDependency */,
+			);
+			name = KurrencyWatch;
+			productName = KurrencyWatch;
+			productReference = 94F27A461F1C0CAB004256EE /* KurrencyWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		94F27A511F1C0CAC004256EE /* KurrencyWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94F27A691F1C0CAC004256EE /* Build configuration list for PBXNativeTarget "KurrencyWatch Extension" */;
+			buildPhases = (
+				D136808066075938F272E460 /* [CP] Check Pods Manifest.lock */,
+				94F27A4E1F1C0CAC004256EE /* Sources */,
+				94F27A4F1F1C0CAC004256EE /* Frameworks */,
+				94F27A501F1C0CAC004256EE /* Resources */,
+				4303E416E669BEAC90B58EF6 /* [CP] Embed Pods Frameworks */,
+				7D0B7CF670D9B69CD7BA4048 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "KurrencyWatch Extension";
+			productName = "KurrencyWatch Extension";
+			productReference = 94F27A521F1C0CAC004256EE /* KurrencyWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		94F4D3D21F1A2EE100481C2B /* Kurrency */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94F4D3F31F1A2EE100481C2B /* Build configuration list for PBXNativeTarget "Kurrency" */;
@@ -408,10 +576,12 @@
 				94F4D3D11F1A2EE100481C2B /* Resources */,
 				ED15A52C2E369BDE8D00E59A /* [CP] Embed Pods Frameworks */,
 				6B8316C47B4B4EB166403FED /* [CP] Copy Pods Resources */,
+				94F27A6C1F1C0CAC004256EE /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				94F27A631F1C0CAC004256EE /* PBXTargetDependency */,
 			);
 			name = Kurrency;
 			productName = Kurrency;
@@ -449,6 +619,16 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Ard Stavileci";
 				TargetAttributes = {
+					94F27A451F1C0CAB004256EE = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 9W566NS2CS;
+						ProvisioningStyle = Automatic;
+					};
+					94F27A511F1C0CAC004256EE = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 9W566NS2CS;
+						ProvisioningStyle = Automatic;
+					};
 					94F4D3D21F1A2EE100481C2B = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 9W566NS2CS;
@@ -477,11 +657,30 @@
 			targets = (
 				94F4D3D21F1A2EE100481C2B /* Kurrency */,
 				94F4D3E91F1A2EE100481C2B /* KurrencyTests */,
+				94F27A451F1C0CAB004256EE /* KurrencyWatch */,
+				94F27A511F1C0CAC004256EE /* KurrencyWatch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		94F27A441F1C0CAB004256EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94F27A4C1F1C0CAB004256EE /* Assets.xcassets in Resources */,
+				94F27A4A1F1C0CAB004256EE /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94F27A501F1C0CAC004256EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94F27A601F1C0CAC004256EE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		94F4D3D11F1A2EE100481C2B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -519,6 +718,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KurrencyTests/Pods-KurrencyTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4303E416E669BEAC90B58EF6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KurrencyWatch Extension/Pods-KurrencyWatch Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		654EE9E3C236EFC58F67EA9D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -547,6 +761,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kurrency/Pods-Kurrency-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D0B7CF670D9B69CD7BA4048 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KurrencyWatch Extension/Pods-KurrencyWatch Extension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		99943DE2C5451C822534B6D8 /* [CP] Check Pods Manifest.lock */ = {
@@ -579,6 +808,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		D136808066075938F272E460 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		ED15A52C2E369BDE8D00E59A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -597,6 +841,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		94F27A4E1F1C0CAC004256EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				947BFE3C1F1D485300FBC6A2 /* Constants.swift in Sources */,
+				94F27A5E1F1C0CAC004256EE /* NotificationController.swift in Sources */,
+				947BFE471F1D6AD400FBC6A2 /* Utils.swift in Sources */,
+				94F27A5C1F1C0CAC004256EE /* ExtensionDelegate.swift in Sources */,
+				947BFE3B1F1D442E00FBC6A2 /* NetworkService.swift in Sources */,
+				947BFE411F1D590F00FBC6A2 /* ConvertedCurrencyRowController.swift in Sources */,
+				947BFE3F1F1D488100FBC6A2 /* Result.swift in Sources */,
+				94F27A5A1F1C0CAC004256EE /* InterfaceController.swift in Sources */,
+				947BFE431F1D5C2200FBC6A2 /* ConvertedCurrency.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		94F4D3CF1F1A2EE100481C2B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -614,6 +874,7 @@
 				94F4D4131F1B951800481C2B /* Currency.swift in Sources */,
 				9475BE341F1BC9F40017EF54 /* CoreDataServices.swift in Sources */,
 				5C25E1533DC52E94031E798A /* MainInteractorOutput.swift in Sources */,
+				947BFE461F1D6AA900FBC6A2 /* MessageBanner.swift in Sources */,
 				B4585D06AAF8A318C813786A /* MainWireframe.swift in Sources */,
 				94F4D4111F1B923500481C2B /* NetworkService.swift in Sources */,
 				9475BE361F1BCBDC0017EF54 /* Constants.swift in Sources */,
@@ -645,6 +906,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		94F27A551F1C0CAC004256EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 94F27A511F1C0CAC004256EE /* KurrencyWatch Extension */;
+			targetProxy = 94F27A541F1C0CAC004256EE /* PBXContainerItemProxy */;
+		};
+		94F27A631F1C0CAC004256EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 94F27A451F1C0CAB004256EE /* KurrencyWatch */;
+			targetProxy = 94F27A621F1C0CAC004256EE /* PBXContainerItemProxy */;
+		};
 		94F4D3EC1F1A2EE100481C2B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 94F4D3D21F1A2EE100481C2B /* Kurrency */;
@@ -653,6 +924,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		94F27A481F1C0CAB004256EE /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94F27A491F1C0CAB004256EE /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		94F4D3E21F1A2EE100481C2B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -664,6 +943,78 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		94F27A651F1C0CAC004256EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9W566NS2CS;
+				IBSC_MODULE = KurrencyWatch_Extension;
+				INFOPLIST_FILE = KurrencyWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.Kurrency.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		94F27A661F1C0CAC004256EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9W566NS2CS;
+				IBSC_MODULE = KurrencyWatch_Extension;
+				INFOPLIST_FILE = KurrencyWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.Kurrency.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Release;
+		};
+		94F27A671F1C0CAC004256EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43A2F6A991E97E1F49A22525 /* Pods-KurrencyWatch Extension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = 9W566NS2CS;
+				INFOPLIST_FILE = "KurrencyWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.Kurrency.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		94F27A681F1C0CAC004256EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B47E64F1B657418AB910C6BE /* Pods-KurrencyWatch Extension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = 9W566NS2CS;
+				INFOPLIST_FILE = "KurrencyWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.Kurrency.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Release;
+		};
 		94F4D3F11F1A2EE100481C2B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -822,6 +1173,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		94F27A691F1C0CAC004256EE /* Build configuration list for PBXNativeTarget "KurrencyWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94F27A671F1C0CAC004256EE /* Debug */,
+				94F27A681F1C0CAC004256EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94F27A6B1F1C0CAC004256EE /* Build configuration list for PBXNativeTarget "KurrencyWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94F27A651F1C0CAC004256EE /* Debug */,
+				94F27A661F1C0CAC004256EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		94F4D3CE1F1A2EE100481C2B /* Build configuration list for PBXProject "Kurrency" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

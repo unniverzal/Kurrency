@@ -7,18 +7,17 @@
 //
 
 import Foundation
-import BRYXBanner
 
 class Utils {
 	
-	static func titleWithId(currency : Currency) -> String{
-		let currencyFlag = flagOf(currency: String(currency.id.characters.dropLast()))
-		return "\(currencyFlag) \(currency.id!)"
+	static func titleWithId(currencyId : String) -> String{
+		let currencyFlag = flagOf(currency: String(currencyId.characters.dropLast()))
+		return "\(currencyFlag) \(currencyId)"
 	}
 	
-	static func titleWithName(currency : Currency) -> String{
-		let currencyFlag = flagOf(currency: String(currency.id.characters.dropLast()))
-		return "\(currencyFlag) \(currency.currencyName!)"
+	static func titleWithName(currencyId : String,currencyName : String) -> String{
+		let currencyFlag = flagOf(currency: String(currencyId.characters.dropLast()))
+		return "\(currencyFlag) \(currencyName)"
 	}
 
 	static func flagOf(currency: String) -> String {
@@ -30,12 +29,8 @@ class Utils {
 		return String(flag)
 	}
 	
-	static func showMessage(message : String, tapAction : (()->Void)? = nil){
-		
-		let banner = Banner(title: "Something went wrong", subtitle: message, image: nil, backgroundColor: UIColor.red)
-		banner.dismissesOnTap = true
-		banner.didTapBlock = tapAction
-		banner.show(duration: 5.0)
+	static func getSymbolForCurrencyCode(code: String) -> String? {
+		let locale = NSLocale(localeIdentifier: code)
+		return locale.displayName(forKey: NSLocale.Key.currencySymbol, value: code)
 	}
-
 }

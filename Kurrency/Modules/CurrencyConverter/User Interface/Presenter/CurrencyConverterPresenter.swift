@@ -48,7 +48,7 @@ class CurrencyConverterPresenter: CurrencyConverterMainModuleInterface, Currency
 	}
 	
 	func showErroMessage(message : String){
-		Utils.showMessage(message: message)
+		MessageBanner.showMessage(message: message)
 	}
 	
 	func convertCurrencyButtonTapped(currencyFrom: Currency?, currencyTo: Currency?, amountToConvert: String?) {

@@ -4,12 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Alamofire.xcscheme</key>
+		<key>Alamofire-iOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>AlamofireObjectMapper.xcscheme</key>
+		<key>Alamofire-watchOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>AlamofireObjectMapper-iOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>AlamofireObjectMapper-watchOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -24,7 +34,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>ObjectMapper.xcscheme</key>
+		<key>ObjectMapper-iOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ObjectMapper-watchOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -39,6 +54,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-KurrencyWatch Extension.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftSiriWaveformView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,17 +67,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>06FBA40BF018BB16765F6D86607B05B0</key>
+		<key>173E4104E4F2CE5ECC896A154802C6D5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1949C4D8B7CC92F97DE61F2FAC85BEA2</key>
+		<key>3FC7A7F52173511943B003119F036BA7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2F5622F3B18DF497981AB58C6D1FC72F</key>
+		<key>4D8199C20C1BE5F5BCDBC8F8CB4BF089</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,17 +87,37 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<key>5A245843DFF89BB1B385E3EA393C4D50</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9502FB01641FBABB78522037E882757B</key>
+		<key>5F249682C675064179EE0B094A773DDC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8D7D6AA32E9ACB0653027A1EB44E8DE4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>93785CDC427960877603F0B73D248AF4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9C3583D90A0C9BE82B607ACBDC9D4CD6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B61DAD4FE43E61697AFEACC5B4DFB5E8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E61D7894E5DCCE7DC704609AA47F9647</key>
 		<dict>
 			<key>primary</key>
 			<true/>

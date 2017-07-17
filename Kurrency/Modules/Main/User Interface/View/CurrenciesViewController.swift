@@ -50,7 +50,7 @@ class CurrenciesViewController: UIViewController,CurrenciesViewInterface,UITable
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "CurrencyCell", for: indexPath)
-		cell.textLabel?.text = Utils.titleWithName(currency: currencies[indexPath.row])
+		cell.textLabel?.text = Utils.titleWithName(currencyId: currencies[indexPath.row].id!, currencyName: currencies[indexPath.row].currencyName!)
 		cell.detailTextLabel?.text = currencies[indexPath.row].currencySymbol
 		return cell
 	}

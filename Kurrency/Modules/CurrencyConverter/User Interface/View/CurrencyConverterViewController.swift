@@ -33,13 +33,13 @@ class CurrencyConverterViewController: UIViewController, CurrencyConverterViewIn
 	func setConvertFromCurrency(currency : Currency){
 		currencyFrom = currency
 		currencyFromSymbol.text = currency.currencySymbol
-		currencyFromButton.setTitle(Utils.titleWithId(currency: currency), for: UIControlState())
+		currencyFromButton.setTitle(Utils.titleWithId(currencyId: currency.id), for: UIControlState())
 	}
 	
 	func setConvertToCurrency(currency : Currency){
 		currencyTo = currency
 		currencyToSymbol.text = currency.currencySymbol
-		currencyToButton.setTitle(Utils.titleWithId(currency: currency), for: UIControlState())
+		currencyToButton.setTitle(Utils.titleWithId(currencyId: currency.id), for: UIControlState())
 	}
 	
 	func set(convertedAmount : String){

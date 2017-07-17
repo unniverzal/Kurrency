@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
+    </dependencies>
+    <scenes>
+        <!--Kurrency-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="Currencies" title="Kurrency" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="KurrencyWatch" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" spacing="6" id="wDv-uV-hSN">
+                            <items>
+                                <separator height="1" heightAdjustment="-4" alignment="left" verticalAlignment="center" id="7lQ-t7-3Wl">
+                                    <color key="color" red="0.21176470589999999" green="0.78823529410000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </separator>
+                                <label alignment="left" verticalAlignment="center" text="Euro" id="P6c-Gg-sYS"/>
+                                <label alignment="right" verticalAlignment="center" text="1$" id="jAu-Bk-cyc"/>
+                            </items>
+                            <edgeInsets key="margins" left="6" right="6" top="0.0" bottom="0.0"/>
+                        </group>
+                        <table alignment="left" id="KGN-Qk-epu">
+                            <items>
+                                <tableRow identifier="Currencies" id="g3K-Wo-u5e" customClass="ConvertedCurrencyRowController" customModule="KurrencyWatch_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" spacing="6" id="M0F-ET-M3f">
+                                        <items>
+                                            <separator height="1" heightAdjustment="-4" alignment="left" verticalAlignment="center" id="r4Q-NM-fMa">
+                                                <color key="color" red="0.21176470589999999" green="0.78823529410000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </separator>
+                                            <group alignment="left" layout="vertical" spacing="0.0" id="uBV-Zv-Vlw">
+                                                <items>
+                                                    <group width="1" height="32" alignment="left" spacing="4" id="eZz-OT-JhL">
+                                                        <items>
+                                                            <label alignment="left" verticalAlignment="center" text="Test" id="SuI-TV-6CP"/>
+                                                            <label alignment="right" verticalAlignment="center" text="test2" id="MXe-XU-yLp"/>
+                                                        </items>
+                                                    </group>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="currencyName" destination="SuI-TV-6CP" id="Npf-0z-XFY"/>
+                                        <outlet property="currencyValue" destination="MXe-XU-yLp" id="kNv-7c-h7q"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="currenciesTable" destination="KGN-Qk-epu" id="mzi-FI-yi5"/>
+                        <outlet property="euroCurrencyLabel" destination="P6c-Gg-sYS" id="qOk-J4-VFC"/>
+                        <outlet property="euroCurrencyValue" destination="jAu-Bk-cyc" id="8tL-PO-Vtu"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="KurrencyWatch" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.21176470589999999" green="0.78823529410000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>

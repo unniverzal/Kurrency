@@ -15,3 +15,9 @@ target 'Kurrency' do
 	end
 	
 end
+
+target 'KurrencyWatch Extension' do
+	use_frameworks!
+	platform :watchos, '2.0'
+	pod 'AlamofireObjectMapper', '~> 4.0'
+end

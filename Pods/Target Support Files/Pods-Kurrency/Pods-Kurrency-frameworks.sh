@@ -89,17 +89,17 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/AlamofireObjectMapper/AlamofireObjectMapper.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Alamofire-iOS/Alamofire.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/AlamofireObjectMapper-iOS/AlamofireObjectMapper.framework"
   install_framework "$BUILT_PRODUCTS_DIR/BRYXBanner/BRYXBanner.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/ObjectMapper/ObjectMapper.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/ObjectMapper-iOS/ObjectMapper.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftSiriWaveformView/SwiftSiriWaveformView.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/AlamofireObjectMapper/AlamofireObjectMapper.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Alamofire-iOS/Alamofire.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/AlamofireObjectMapper-iOS/AlamofireObjectMapper.framework"
   install_framework "$BUILT_PRODUCTS_DIR/BRYXBanner/BRYXBanner.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/ObjectMapper/ObjectMapper.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/ObjectMapper-iOS/ObjectMapper.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftSiriWaveformView/SwiftSiriWaveformView.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
