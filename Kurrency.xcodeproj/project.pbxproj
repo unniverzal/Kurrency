@@ -20,6 +20,8 @@
 		7753D532A51A1FDEEBF986EF /* CurrencyConverterViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463BC2C36BB7EA3003BE093 /* CurrencyConverterViewInterface.swift */; };
 		7DFE75EB0CB126FB0A17F8B6 /* MainModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96382F142B70213AA4C10A2A /* MainModuleConfigurator.swift */; };
 		8B366231BE57A56B444825E9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1D86931BE23A85B724F09D /* MainViewController.swift */; };
+		941ABC7F1F1EB002001BB4EC /* FluidView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 941ABC7E1F1EB002001BB4EC /* FluidView.xib */; };
+		941ABC811F1EB02E001BB4EC /* FluidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941ABC801F1EB02E001BB4EC /* FluidView.swift */; };
 		9475BE341F1BC9F40017EF54 /* CoreDataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9475BE331F1BC9F40017EF54 /* CoreDataServices.swift */; };
 		9475BE361F1BCBDC0017EF54 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9475BE351F1BCBDC0017EF54 /* Constants.swift */; };
 		9475BE391F1BCD3F0017EF54 /* CurrenciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9475BE381F1BCD3F0017EF54 /* CurrenciesViewController.swift */; };
@@ -131,6 +133,8 @@
 		65ACD736154C9F6952D6F265 /* Pods_KurrencyWatch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KurrencyWatch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		719B0B36333A2C90B78F51BE /* CurrencyConverterWireframe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CurrencyConverterWireframe.swift; sourceTree = "<group>"; };
 		77E981BFFD18B2B907FBB55E /* MainPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		941ABC7E1F1EB002001BB4EC /* FluidView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FluidView.xib; sourceTree = "<group>"; };
+		941ABC801F1EB02E001BB4EC /* FluidView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FluidView.swift; sourceTree = "<group>"; };
 		9463BC2C36BB7EA3003BE093 /* CurrencyConverterViewInterface.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CurrencyConverterViewInterface.swift; sourceTree = "<group>"; };
 		9475BE331F1BC9F40017EF54 /* CoreDataServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataServices.swift; sourceTree = "<group>"; };
 		9475BE351F1BCBDC0017EF54 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -447,6 +451,8 @@
 			isa = PBXGroup;
 			children = (
 				94F4D4001F1A369400481C2B /* BackgroundView.swift */,
+				941ABC7E1F1EB002001BB4EC /* FluidView.xib */,
+				941ABC801F1EB02E001BB4EC /* FluidView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -690,6 +696,7 @@
 				94F4D3E11F1A2EE100481C2B /* Assets.xcassets in Resources */,
 				732F9FAA61D840E5E26CD931 /* MainStoryboard.storyboard in Resources */,
 				2B52F79A98951603BBB737F1 /* CurrencyConverterStoryboard.storyboard in Resources */,
+				941ABC7F1F1EB002001BB4EC /* FluidView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -886,6 +893,7 @@
 				23F18BAE17F49E61D031A378 /* CurrencyConverterModuleConfigurator.swift in Sources */,
 				FB76A2D17F6B67F6CE044B9A /* CurrencyConverterInteractor.swift in Sources */,
 				4CBD5C150510ABD6AABD69F6 /* CurrencyConverterInteractorInput.swift in Sources */,
+				941ABC811F1EB02E001BB4EC /* FluidView.swift in Sources */,
 				DDC37811BB97F6998BF20771 /* CurrencyConverterInteractorOutput.swift in Sources */,
 				46F7271DCBE2EBBF19D079A6 /* CurrencyConverterWireframe.swift in Sources */,
 				140198537AAB44CDE5FE5FF7 /* CurrencyConverterPresenter.swift in Sources */,

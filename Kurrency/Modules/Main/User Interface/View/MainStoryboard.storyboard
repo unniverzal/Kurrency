@@ -65,7 +65,7 @@
                                     <action selector="getStartedButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lnr-sG-DCm"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbi-dc-pBB" customClass="BAFluidView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbi-dc-pBB" customClass="FluidView" customModule="Kurrency" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="408" width="320" height="100"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -93,9 +93,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="ack-Mq-My2" secondAttribute="trailing" constant="20" id="omR-12-9eI"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="fluidView" destination="sbi-dc-pBB" id="0f0-Y9-Ta1"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -21,6 +21,7 @@ class CurrencyConverterViewController: UIViewController, CurrencyConverterViewIn
 	
 	@IBOutlet weak var convertCurrencyButton: UIButton!
 	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+	@IBOutlet weak var fluidViewBottomConstraint: NSLayoutConstraint!
 	
 	var currencyFrom : Currency!
 	var currencyTo : Currency!
@@ -32,6 +33,18 @@ class CurrencyConverterViewController: UIViewController, CurrencyConverterViewIn
 		currencyToButton.setTitle("Convert to", for: UIControlState.normal)
     }
 
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		NotificationCenter.default.addObserver(self, selector:#selector(CurrencyConverterViewController.keyboardWillshow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+		NotificationCenter.default.addObserver(self, selector:#selector(CurrencyConverterViewController.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+	}
+	
+	override func viewDidDisappear(_ animated: Bool) {
+		super.viewDidDisappear(true)
+		NotificationCenter.default.removeObserver(NSNotification.Name.UIKeyboardWillShow)
+		NotificationCenter.default.removeObserver(NSNotification.Name.UIKeyboardWillHide)
+	}
+	
 	func setConvertFromCurrency(currency : Currency){
 		currencyFrom = currency
 		currencyFromSymbol.text = currency.currencySymbol
@@ -73,5 +86,23 @@ class CurrencyConverterViewController: UIViewController, CurrencyConverterViewIn
 	@IBAction func scrollViewTapGestureAction(_ sender: Any) {
 		amountToConvertTextField.resignFirstResponder()
 	}
+	
+	func keyboardWillshow(_ sender : Notification){
+		let userInfo: NSDictionary = sender.userInfo! as NSDictionary
+		let keyboardInfo = userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue
+		let keyboardSize = keyboardInfo.cgRectValue.size
+		fluidViewBottomConstraint.constant = keyboardSize.height
+		UIView.animate(withDuration: 0.25, animations: { () -> Void in
+			self.view.layoutIfNeeded()
+		})
+	}
+	
+	func keyboardWillHide(_ sender : Notification) {
+		fluidViewBottomConstraint.constant = 0
+		UIView.animate(withDuration: 0.25, animations: { () -> Void in
+			self.view.layoutIfNeeded()
+		})
+	}
+
 
 }
