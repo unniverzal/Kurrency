@@ -70,4 +70,8 @@ class CurrencyConverterViewController: UIViewController, CurrencyConverterViewIn
 	@IBAction func covertCurrencyButtonAction(_ sender: Any) {
 		eventHandler.convertCurrencyButtonTapped(currencyFrom : currencyFrom?.id , currencyTo : currencyTo?.id , amountToConvert : amountToConvertTextField.text)
 	}
+	@IBAction func scrollViewTapGestureAction(_ sender: Any) {
+		amountToConvertTextField.resignFirstResponder()
+	}
+
 }
