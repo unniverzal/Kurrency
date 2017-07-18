@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -53,21 +52,6 @@
                                     <constraint firstItem="hat-Gd-fdp" firstAttribute="centerX" secondItem="ack-Mq-My2" secondAttribute="centerX" id="b1K-sr-lJV"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbi-dc-pBB" customClass="SwiftSiriWaveformView" customModule="SwiftSiriWaveformView">
-                                <rect key="frame" x="0.0" y="454" width="320" height="100"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="rVc-vg-Nif"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="waveColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfWaves">
-                                        <integer key="value" value="0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Oz-Mx-0M5">
                                 <rect key="frame" x="0.0" y="504" width="320" height="64"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -81,6 +65,18 @@
                                     <action selector="getStartedButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lnr-sG-DCm"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbi-dc-pBB" customClass="BAFluidView">
+                                <rect key="frame" x="0.0" y="408" width="320" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="rVc-vg-Nif"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="waveColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.22352941176470587" green="0.69411764705882351" blue="0.99960476160049438" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -92,13 +88,13 @@
                             <constraint firstItem="ack-Mq-My2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="GmV-JQ-uQj"/>
                             <constraint firstItem="3rY-3s-fuv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.8" id="Ixw-ZD-2lg"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0Oz-Mx-0M5" secondAttribute="bottom" id="JSs-OX-1ko"/>
-                            <constraint firstItem="sbi-dc-pBB" firstAttribute="centerY" secondItem="0Oz-Mx-0M5" secondAttribute="top" id="SfC-Da-elf"/>
+                            <constraint firstItem="sbi-dc-pBB" firstAttribute="bottom" secondItem="0Oz-Mx-0M5" secondAttribute="top" constant="4" id="SfC-Da-elf"/>
                             <constraint firstItem="sbi-dc-pBB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fWr-GE-6lg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ack-Mq-My2" secondAttribute="trailing" constant="20" id="omR-12-9eI"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="waterWaveAnimationView" destination="sbi-dc-pBB" id="XXv-Np-Xs5"/>
+                        <outlet property="fluidView" destination="sbi-dc-pBB" id="0f0-Y9-Ta1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

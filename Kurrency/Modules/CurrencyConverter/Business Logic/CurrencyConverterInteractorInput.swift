@@ -10,6 +10,6 @@ protocol CurrencyConverterInteractorInput {
 	
 	func getCurrencies(startingWith : String)
 	
-	func convertCurrency(from : Currency , to : Currency , amount : String)
+	func convertCurrency(from : String , to : String , amount : String)
 
 }

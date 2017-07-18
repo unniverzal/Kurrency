@@ -28,18 +28,20 @@ class CurrencyConverterViewController: UIViewController, CurrencyConverterViewIn
 
     override func viewDidLoad(){
 		super.viewDidLoad()
+		currencyFromButton.setTitle("Convert from", for: UIControlState.normal)
+		currencyToButton.setTitle("Convert to", for: UIControlState.normal)
     }
 
 	func setConvertFromCurrency(currency : Currency){
 		currencyFrom = currency
 		currencyFromSymbol.text = currency.currencySymbol
-		currencyFromButton.setTitle(Utils.titleWithId(currencyId: currency.id), for: UIControlState())
+		currencyFromButton.setTitle(Utils.titleWithId(currencyId: currency.id), for: UIControlState.normal)
 	}
 	
 	func setConvertToCurrency(currency : Currency){
 		currencyTo = currency
 		currencyToSymbol.text = currency.currencySymbol
-		currencyToButton.setTitle(Utils.titleWithId(currencyId: currency.id), for: UIControlState())
+		currencyToButton.setTitle(Utils.titleWithId(currencyId: currency.id), for: UIControlState.normal)
 	}
 	
 	func set(convertedAmount : String){
@@ -66,6 +68,6 @@ class CurrencyConverterViewController: UIViewController, CurrencyConverterViewIn
 	}
 	
 	@IBAction func covertCurrencyButtonAction(_ sender: Any) {
-		eventHandler.convertCurrencyButtonTapped(currencyFrom : currencyFrom , currencyTo : currencyTo , amountToConvert : amountToConvertTextField.text)
+		eventHandler.convertCurrencyButtonTapped(currencyFrom : currencyFrom?.id , currencyTo : currencyTo?.id , amountToConvert : amountToConvertTextField.text)
 	}
 }

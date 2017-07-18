@@ -14,7 +14,7 @@ protocol CurrencyConverterModuleInterface: class {
 	
 	func convertToButtonTapped()
 	
-	func convertCurrencyButtonTapped(currencyFrom : Currency? , currencyTo : Currency? , amountToConvert : String?)
+	func convertCurrencyButtonTapped(currencyFrom : String? , currencyTo : String? , amountToConvert : String?)
 }
 
 extension CurrencyConverterModuleInterface where Self:CurrencyConverterPresenter{

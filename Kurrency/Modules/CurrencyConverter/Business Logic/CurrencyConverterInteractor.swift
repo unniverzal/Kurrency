@@ -36,15 +36,14 @@ class CurrencyConverterInteractor: CurrencyConverterInteractorInput {
 		}
 	}
 	
-	
 	func getCurrencies(startingWith text: String) {
 		output.set(currencies: currencies.filter({$0.currencyName!.hasPrefix(text)}).sorted(by: {$0.currencyName < $1.currencyName}))
 	}
 	
-	func convertCurrency(from : Currency , to : Currency , amount : String){
+	func convertCurrency(from : String , to : String , amount : String){
 		let params = ["apiKey" : Constants.apiKey,
 		              "compact" : "ultra",
-		              "q":"\(from.id!)_\(to.id!)"]
+		              "q":"\(from)_\(to)"]
 		NetworkService.shared.executeRequest(method: .get, url: Constants.convertCurrencyURL, parameters:params, onSucceed: { [weak self](dict) in
 			if let value = dict.first?.value as? Double{
 				self?.output.set(convertedAmount: Double(amount)!*value)
@@ -52,7 +51,8 @@ class CurrencyConverterInteractor: CurrencyConverterInteractorInput {
 		}) { [weak self](error) in
 			self?.output.showErroMessage(message: "Failed to convert currency")
 		}
-
 	}
+	
+	
 
 }

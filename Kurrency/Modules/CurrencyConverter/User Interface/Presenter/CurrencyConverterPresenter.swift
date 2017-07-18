@@ -51,7 +51,7 @@ class CurrencyConverterPresenter: CurrencyConverterMainModuleInterface, Currency
 		MessageBanner.showMessage(message: message)
 	}
 	
-	func convertCurrencyButtonTapped(currencyFrom: Currency?, currencyTo: Currency?, amountToConvert: String?) {
+	func convertCurrencyButtonTapped(currencyFrom: String?, currencyTo: String?, amountToConvert: String?) {
 		if currencyFrom == nil {
 			showErroMessage(message: "You must select a curency to convert from")
 			return
