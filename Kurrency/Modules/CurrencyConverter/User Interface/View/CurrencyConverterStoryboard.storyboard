@@ -201,11 +201,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XkV-a1-NaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="0Pa-Fb-OGF">
-                    <connections>
-                        <action selector="scrollViewTapGestureAction:" destination="2f5-DA-0mc" id="SZO-9u-lGQ"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="883.125" y="34.859154929577464"/>
         </scene>

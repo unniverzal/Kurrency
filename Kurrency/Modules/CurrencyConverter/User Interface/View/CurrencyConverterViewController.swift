@@ -10,7 +10,6 @@ import UIKit
 
 class CurrencyConverterViewController: UIViewController, CurrencyConverterViewInterface {
 
-	@IBOutlet weak var scrollView: UIScrollView!
 	@IBOutlet weak var currencyFromSymbol: UILabel!
 	@IBOutlet weak var amountToConvertTextField: UITextField!
 	@IBOutlet weak var currencyFromButton: UIButton!
@@ -43,6 +42,11 @@ class CurrencyConverterViewController: UIViewController, CurrencyConverterViewIn
 		super.viewDidDisappear(true)
 		NotificationCenter.default.removeObserver(NSNotification.Name.UIKeyboardWillShow)
 		NotificationCenter.default.removeObserver(NSNotification.Name.UIKeyboardWillHide)
+	}
+	
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		super.touchesBegan(touches, with: event)
+		self.view.endEditing(true)
 	}
 	
 	func setConvertFromCurrency(currency : Currency){
@@ -82,9 +86,6 @@ class CurrencyConverterViewController: UIViewController, CurrencyConverterViewIn
 	
 	@IBAction func covertCurrencyButtonAction(_ sender: Any) {
 		eventHandler.convertCurrencyButtonTapped(currencyFrom : currencyFrom?.id , currencyTo : currencyTo?.id , amountToConvert : amountToConvertTextField.text)
-	}
-	@IBAction func scrollViewTapGestureAction(_ sender: Any) {
-		amountToConvertTextField.resignFirstResponder()
 	}
 	
 	func keyboardWillshow(_ sender : Notification){

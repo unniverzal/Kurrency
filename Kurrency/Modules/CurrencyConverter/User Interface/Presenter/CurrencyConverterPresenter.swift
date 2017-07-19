@@ -13,22 +13,6 @@ class CurrencyConverterPresenter: CurrencyConverterMainModuleInterface, Currency
     var interactor: CurrencyConverterInteractorInput!
     var router: CurrencyConverterRouter!
 	var currenciesViewInterface : CurrenciesViewInterface?
-
-	func convertToButtonTapped() {
-		router.presentCurrenciesViewController(withType: .convertTo)
-	}
-	
-	func convertFromButtonTapped() {
-		router.presentCurrenciesViewController(withType: .convertFrom)
-	}
-	
-	func currenciesViewLoaded(){
-		interactor.getCurrencies(startingWith: "")
-	}
-	
-	func searchBarTextChange(withText text: String){
-		interactor.getCurrencies(startingWith: text)
-	}
 	
 	func set(currencies : [Currency]){
 		currenciesViewInterface?.set(currencies: currencies)
@@ -51,6 +35,14 @@ class CurrencyConverterPresenter: CurrencyConverterMainModuleInterface, Currency
 		MessageBanner.showMessage(message: message)
 	}
 	
+	func convertToButtonTapped() {
+		router.presentCurrenciesViewController(withType: .convertTo)
+	}
+	
+	func convertFromButtonTapped() {
+		router.presentCurrenciesViewController(withType: .convertFrom)
+	}
+	
 	func convertCurrencyButtonTapped(currencyFrom: String?, currencyTo: String?, amountToConvert: String?) {
 		if currencyFrom == nil {
 			showErroMessage(message: "You must select a curency to convert from")
@@ -66,4 +58,12 @@ class CurrencyConverterPresenter: CurrencyConverterMainModuleInterface, Currency
 		interactor.convertCurrency(from: currencyFrom!, to: currencyTo!, amount: amountToConvert!)
 	}
 	
+	func currenciesViewLoaded(){
+		interactor.getCurrencies(startingWith: "")
+	}
+	
+	func searchBarTextChange(withText text: String){
+		interactor.getCurrencies(startingWith: text)
+	}
+
 }

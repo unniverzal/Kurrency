@@ -52,7 +52,4 @@ class CurrencyConverterInteractor: CurrencyConverterInteractorInput {
 			self?.output.showErroMessage(message: "Failed to convert currency")
 		}
 	}
-	
-	
-
 }
