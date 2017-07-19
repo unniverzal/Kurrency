@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftSiriWaveformView
 
 class MainViewController: UIViewController, MainViewInterface {
 

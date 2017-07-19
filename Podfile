@@ -5,7 +5,6 @@ target 'Kurrency' do
 	use_frameworks!
 	pod 'AlamofireObjectMapper', '~> 4.0'
 	pod 'BRYXBanner', :git => 'https://github.com/bryx-inc/BRYXBanner.git', :branch => 'swift3'
-	pod "SwiftSiriWaveformView"
 	pod "BAFluidView"
 	# Pods for Kurrency
 	

@@ -8,13 +8,11 @@ PODS:
     - BRYXBanner/Core (= 0.6)
   - BRYXBanner/Core (0.6)
   - ObjectMapper (2.2.7)
-  - SwiftSiriWaveformView (2.1.0)
 
 DEPENDENCIES:
   - AlamofireObjectMapper (~> 4.0)
   - BAFluidView
   - BRYXBanner (from `https://github.com/bryx-inc/BRYXBanner.git`, branch `swift3`)
-  - SwiftSiriWaveformView
 
 EXTERNAL SOURCES:
   BRYXBanner:
@@ -32,8 +30,7 @@ SPEC CHECKSUMS:
   BAFluidView: 5d84ef109831b97740f75b6d785e51f13fa08398
   BRYXBanner: 42309d45bcc040a36e2b176bde727a8198b16576
   ObjectMapper: 65abcfd9a61cf7396cbd14a4fb22fddfcc46577e
-  SwiftSiriWaveformView: 240c8b41d0350a97b0a5de1ee3f3ab5255496580
 
-PODFILE CHECKSUM: fae71895f5c37377f01b5a3b986f04fa31997756
+PODFILE CHECKSUM: b1944ca1bba65f172ee0bf56a5809e6d3f1f3f15
 
 COCOAPODS: 1.2.1
