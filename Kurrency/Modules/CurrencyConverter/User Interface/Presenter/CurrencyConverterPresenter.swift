@@ -9,12 +9,12 @@ import UIKit
 
 class CurrencyConverterPresenter: CurrencyConverterMainModuleInterface, CurrencyConverterInteractorOutput {
 
-    weak var viewController : UIViewController!
+    weak var viewController: UIViewController!
     var interactor: CurrencyConverterInteractorInput!
     var router: CurrencyConverterRouter!
-	var currenciesViewInterface : CurrenciesViewInterface?
+	var currenciesViewInterface: CurrenciesViewInterface?
 	
-	func set(currencies : [Currency]){
+	func set(currencies: [Currency]) {
 		currenciesViewInterface?.set(currencies: currencies)
 	}
 	
@@ -31,16 +31,16 @@ class CurrencyConverterPresenter: CurrencyConverterMainModuleInterface, Currency
 		}
 	}
 	
-	func showErroMessage(message : String){
+	func showErroMessage(message: String) {
 		MessageBanner.showMessage(message: message)
 	}
 	
 	func convertToButtonTapped() {
-		router.presentCurrenciesViewController(withType: .convertTo)
+		router.presentCurrenciesViewController(with: .convertTo)
 	}
 	
 	func convertFromButtonTapped() {
-		router.presentCurrenciesViewController(withType: .convertFrom)
+		router.presentCurrenciesViewController(with: .convertFrom)
 	}
 	
 	func convertCurrencyButtonTapped(currencyFrom: String?, currencyTo: String?, amountToConvert: String?) {
@@ -58,11 +58,11 @@ class CurrencyConverterPresenter: CurrencyConverterMainModuleInterface, Currency
 		interactor.convertCurrency(from: currencyFrom!, to: currencyTo!, amount: amountToConvert!)
 	}
 	
-	func currenciesViewLoaded(){
+	func currenciesViewLoaded() {
 		interactor.getCurrencies(startingWith: "")
 	}
 	
-	func searchBarTextChange(withText text: String){
+	func searchBarTextChange(withText text: String) {
 		interactor.getCurrencies(startingWith: text)
 	}
 

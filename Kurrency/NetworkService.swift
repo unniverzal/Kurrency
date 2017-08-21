@@ -19,24 +19,24 @@ class NetworkService {
 		
 	}
 
-	func executeRequest<T:Mappable>(method: HTTPMethod , url : URLConvertible , parameters : [String : Any]? = nil, headers : [String : String]? = nil, onSucceed : @escaping (T)->Void, onFailure:@escaping (Error)->Void){
+	func executeRequest<T: Mappable>(method: HTTPMethod , url: URLConvertible ,parameters: [String: Any]? = nil, headers: [String: String]? = nil, onSucceed: @escaping (T)->Void, onFailure: @escaping (Error)->Void) {
 		
-		Alamofire.request(url, method: method, parameters: parameters, encoding: URLEncoding.default, headers: headers).validate().responseObject { (response:DataResponse<T>) in
-			if let error = response.result.error{
+		Alamofire.request(url, method: method, parameters: parameters, encoding: URLEncoding.default, headers: headers).validate().responseObject { (response: DataResponse<T>) in
+			if let error = response.result.error {
 				onFailure(error)
-			}else if let responseObject = response.result.value{
+			}else if let responseObject = response.result.value {
 				onSucceed(responseObject)
 			}
 		}
 	}
 	
-	func executeRequest(method: HTTPMethod , url : URLConvertible , parameters : [String : Any]? = nil, headers : [String : String]? = nil, onSucceed : @escaping ([String:Any])->Void, onFailure:@escaping (Error)->Void){
+	func executeRequest(method: HTTPMethod , url: URLConvertible, parameters: [String: Any]? = nil, headers: [String: String]? = nil, onSucceed: @escaping ([String: Any])->Void, onFailure: @escaping (Error)->Void) {
 		
 		Alamofire.request(url, method: method, parameters: parameters, encoding: URLEncoding.default, headers: headers).validate().responseJSON { response in
-			if let error = response.result.error{
+			if let error = response.result.error {
 				onFailure(error)
-			}else if let responseObject = response.result.value{
-				onSucceed(responseObject as! [String : Any])
+			}else if let responseObject = response.result.value {
+				onSucceed(responseObject as! [String: Any])
 			}
 		}
 	}

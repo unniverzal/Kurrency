@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainModuleConfigurator{
+class MainModuleConfigurator {
     
     static let shared = MainModuleConfigurator()
     

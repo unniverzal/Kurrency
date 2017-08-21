@@ -10,9 +10,8 @@ import Foundation
 import UIKit
 
 extension UIColor {
-	
-	static func backgroundColor() -> UIColor{
+
+    static func backgroundColor() -> UIColor {
 		return UIColor(red: 45/255, green: 201/255, blue: 255/255, alpha: 1)
 	}
-
 }

@@ -22,11 +22,11 @@ class CurrencyConverterViewController: UIViewController, CurrencyConverterViewIn
 	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 	@IBOutlet weak var fluidViewBottomConstraint: NSLayoutConstraint!
 	
-	var currencyFrom : Currency!
-	var currencyTo : Currency!
+	var currencyFrom: Currency!
+	var currencyTo: Currency!
     var eventHandler: CurrencyConverterModuleInterface!
 
-    override func viewDidLoad(){
+    override func viewDidLoad() {
 		super.viewDidLoad()
 		currencyFromButton.setTitle("Convert from", for: UIControlState.normal)
 		currencyToButton.setTitle("Convert to", for: UIControlState.normal)
@@ -49,29 +49,29 @@ class CurrencyConverterViewController: UIViewController, CurrencyConverterViewIn
 		self.view.endEditing(true)
 	}
 	
-	func setConvertFromCurrency(currency : Currency){
+	func setConvertFromCurrency(currency: Currency) {
 		currencyFrom = currency
 		currencyFromSymbol.text = currency.currencySymbol
 		currencyFromButton.setTitle(Utils.titleWithId(currencyId: currency.id), for: UIControlState.normal)
 	}
 	
-	func setConvertToCurrency(currency : Currency){
+	func setConvertToCurrency(currency: Currency) {
 		currencyTo = currency
 		currencyToSymbol.text = currency.currencySymbol
 		currencyToButton.setTitle(Utils.titleWithId(currencyId: currency.id), for: UIControlState.normal)
 	}
 	
-	func set(convertedAmount : String){
+	func set(convertedAmount: String) {
 		convertedAmountLabel.text = convertedAmount
 		stopActivityIndicator()
 	}
 	
-	func startActivityIndicator(){
+	func startActivityIndicator() {
 		activityIndicator.startAnimating()
 		convertCurrencyButton.isHidden = true
 	}
 	
-	func stopActivityIndicator(){
+	func stopActivityIndicator() {
 		activityIndicator.stopAnimating()
 		convertCurrencyButton.isHidden = false
 	}
@@ -85,10 +85,10 @@ class CurrencyConverterViewController: UIViewController, CurrencyConverterViewIn
 	}
 	
 	@IBAction func covertCurrencyButtonAction(_ sender: Any) {
-		eventHandler.convertCurrencyButtonTapped(currencyFrom : currencyFrom?.id , currencyTo : currencyTo?.id , amountToConvert : amountToConvertTextField.text)
+		eventHandler.convertCurrencyButtonTapped(currencyFrom: currencyFrom?.id, currencyTo: currencyTo?.id, amountToConvert: amountToConvertTextField.text)
 	}
 	
-	func keyboardWillshow(_ sender : Notification){
+	func keyboardWillshow(_ sender: Notification) {
 		let userInfo: NSDictionary = sender.userInfo! as NSDictionary
 		let keyboardInfo = userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue
 		let keyboardSize = keyboardInfo.cgRectValue.size
@@ -98,7 +98,7 @@ class CurrencyConverterViewController: UIViewController, CurrencyConverterViewIn
 		})
 	}
 	
-	func keyboardWillHide(_ sender : Notification) {
+	func keyboardWillHide(_ sender: Notification) {
 		fluidViewBottomConstraint.constant = 0
 		UIView.animate(withDuration: 0.25, animations: { () -> Void in
 			self.view.layoutIfNeeded()

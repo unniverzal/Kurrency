@@ -6,6 +6,6 @@
 //  Copyright © 2017 Ard Stavileci. All rights reserved.
 //
 
-protocol MainInteractorOutput : class{
+protocol MainInteractorOutput: class {
 
 }

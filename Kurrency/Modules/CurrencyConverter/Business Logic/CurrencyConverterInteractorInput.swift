@@ -8,8 +8,8 @@
 
 protocol CurrencyConverterInteractorInput {
 	
-	func getCurrencies(startingWith : String)
+	func getCurrencies(startingWith: String)
 	
-	func convertCurrency(from : String , to : String , amount : String)
+	func convertCurrency(from: String, to: String, amount: String)
 
 }

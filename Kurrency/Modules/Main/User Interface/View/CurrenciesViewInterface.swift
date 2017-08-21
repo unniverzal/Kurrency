@@ -10,5 +10,5 @@ import Foundation
 
 protocol CurrenciesViewInterface {
 	
-	func set(currencies : [Currency])
+	func set(currencies: [Currency])
 }

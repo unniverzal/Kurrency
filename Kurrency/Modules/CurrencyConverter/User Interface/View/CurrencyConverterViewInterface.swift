@@ -8,11 +8,11 @@
 
 protocol CurrencyConverterViewInterface: class {
 	
-	func setConvertFromCurrency(currency : Currency)
+	func setConvertFromCurrency(currency: Currency)
 	
-	func setConvertToCurrency(currency : Currency)
+	func setConvertToCurrency(currency: Currency)
 	
-	func set(convertedAmount : String)
+	func set(convertedAmount: String)
 	
 	func stopActivityIndicator()
 	

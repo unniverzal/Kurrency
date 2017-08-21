@@ -20,6 +20,6 @@ class ConvertedCurrency: Mappable {
 	
 	func mapping(map: Map) {
 		val   <- map["val"]
-		to <- map["to"]
+		to    <- map["to"]
 	}
 }

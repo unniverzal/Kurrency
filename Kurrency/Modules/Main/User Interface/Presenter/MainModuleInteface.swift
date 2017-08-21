@@ -11,14 +11,13 @@ protocol MainModuleInterface: class {
 	func getStartedButtonTapped()
 }
 
-extension MainModuleInterface where Self:MainPresenter{
+extension MainModuleInterface where Self: MainPresenter {
     
-    var userInterface : MainViewInterface?{
+    var userInterface: MainViewInterface?{
         
-        if let userInterface = self.viewController as? MainViewInterface{
-            return self.viewController.isViewLoaded ? userInterface : nil
+        if let userInterface = self.viewController as? MainViewInterface {
+            return self.viewController.isViewLoaded ? userInterface: nil
         }
-        
         return nil
     }
 }

@@ -8,15 +8,15 @@
 
 import UIKit
 
-class CurrenciesViewController: UIViewController,CurrenciesViewInterface,UITableViewDelegate , UITableViewDataSource {
+class CurrenciesViewController: UIViewController, CurrenciesViewInterface, UITableViewDelegate, UITableViewDataSource {
 
 	@IBOutlet weak var tableView: UITableView!
 	var eventHandler : CurrenciesModuleInterface!
 	var type : CurrencyType = .convertFrom
+	var currencies: [Currency] = []
+	var searchBar: UISearchBar!
 	
-	var currencies : [Currency] = []
-	var searchBar : UISearchBar!
-	override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
 		eventHandler.currenciesViewLoaded()
 		setupSearchBar()
@@ -24,7 +24,7 @@ class CurrenciesViewController: UIViewController,CurrenciesViewInterface,UITable
 		tableView.scrollIndicatorInsets = UIEdgeInsetsMake(-64, 0, 0, 0)
 	}
 	
-	func set(currencies : [Currency]){
+	func set(currencies: [Currency]) {
 		self.currencies = currencies
 		tableView.reloadData()
 	}
@@ -70,7 +70,10 @@ class CurrenciesViewController: UIViewController,CurrenciesViewInterface,UITable
 	}
 }
 
-extension CurrenciesViewController : UISearchBarDelegate {
+
+// MARK: - UISearchBarDelegate implementation
+
+extension CurrenciesViewController: UISearchBarDelegate {
 	
 	func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
 		eventHandler.searchBarTextChange(withText: searchText)
@@ -82,6 +85,6 @@ extension CurrenciesViewController : UISearchBarDelegate {
 }
 
 enum CurrencyType {
-	case convertFrom
-	case convertTo
+    case convertFrom
+    case convertTo
 }

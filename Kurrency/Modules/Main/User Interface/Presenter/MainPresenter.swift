@@ -9,13 +9,11 @@ import UIKit
 
 class MainPresenter: MainModuleInterface, MainInteractorOutput {
 
-    weak var viewController : UIViewController!
+    weak var viewController: UIViewController!
     var interactor: MainInteractorInput!
     var router: MainRouter!
 	
-	func getStartedButtonTapped(){
+	func getStartedButtonTapped() {
 		router.presentConvertCurrencyViewController()
 	}
-	
-
 }

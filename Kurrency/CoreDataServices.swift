@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 import UIKit
+
 class CoreDataServices {
 	
 	private let fetchRequest = NSFetchRequest<Currency>(entityName: "Currency")
@@ -20,8 +21,8 @@ class CoreDataServices {
 	
 	}
 	
-	func fetchCurrenciesFromCoreData() -> [Currency]{
-		var currencies : [Currency] = []
+	func fetchCurrenciesFromCoreData() -> [Currency] {
+		var currencies: [Currency] = []
 		do {
 			try currencies = managedObjectContext.fetch(fetchRequest)
 		} catch let error as NSError  {
@@ -30,7 +31,7 @@ class CoreDataServices {
 		return currencies
 	}
 	
-	func checkIfCurrencyExists(withId id :String)->Bool{
+	func checkIfCurrencyExists(withId id: String) -> Bool {
 		
 		let fetchRequest = NSFetchRequest<Currency>(entityName: "Currency")
 		fetchRequest.predicate = NSPredicate(format: "id = %@",id )

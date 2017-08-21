@@ -32,12 +32,12 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 	
-	func requestTopCurrencies(){
-		let params = ["apiKey" : Constants.apiKey,"q":"EUR_USD,EUR_GBP,EUR_ALL,EUR_JPY"]
-		NetworkService.shared.executeRequest(method: .get, url: Constants.convertCurrencyURL,parameters : params,onSucceed: { [weak self](result : Result) in
-			result.results?.forEach({
-				if let value = $0.value as? [String:Any]{
-					let convertedCurrency = Mapper<ConvertedCurrency>().map(JSON:value)!
+	func requestTopCurrencies() {
+		let params = ["apiKey": Constants.apiKey,"q": "EUR_USD,EUR_GBP,EUR_ALL,EUR_JPY"]
+		NetworkService.shared.executeRequest(method: .get, url: Constants.convertCurrencyURL,parameters: params,onSucceed: { [weak self] (result: Result) in
+			result.results?.forEach ({
+				if let value = $0.value as? [String: Any]{
+					let convertedCurrency = Mapper<ConvertedCurrency>().map(JSON: value)!
 					self?.convertedCurrencies.append(convertedCurrency)
 				}
 			})
@@ -47,7 +47,7 @@ class InterfaceController: WKInterfaceController {
 		}
 	}
 	
-	func reloadCurrencyTable(){
+	func reloadCurrencyTable() {
 		currenciesTable.setNumberOfRows(convertedCurrencies.count, withRowType: "Currencies")
 		for index in 0..<currenciesTable.numberOfRows {
 			if let controller = currenciesTable.rowController(at: index) as? ConvertedCurrencyRowController {

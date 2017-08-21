@@ -6,11 +6,11 @@
 //  Copyright © 2017 Ard Stavileci. All rights reserved.
 //
 
-protocol CurrencyConverterInteractorOutput : class{
+protocol CurrencyConverterInteractorOutput : class {
 
-	func set(currencies : [Currency])
+	func set(currencies: [Currency])
 	
-	func set(convertedAmount : Double)
+	func set(convertedAmount: Double)
 	
-	func showErroMessage(message : String)
+	func showErroMessage(message: String)
 }

@@ -16,7 +16,7 @@ class FluidView: BAFluidView {
 		configureWaterView()
 	}
 	
-	func configureWaterView(){
+	func configureWaterView() {
 		self.minAmplitude = 30
 		self.fillColor = UIColor.white
 		self.maxAmplitude = 100
@@ -25,5 +25,4 @@ class FluidView: BAFluidView {
 		self.fillRepeatCount = 20
 		self.fillAutoReverse = false
 	}
-
 }

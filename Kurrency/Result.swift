@@ -9,8 +9,9 @@
 import Foundation
 import ObjectMapper
 
-class Result : Mappable {
-	var results : [String:Any]?
+class Result: Mappable {
+	
+    var results: [String: Any]?
 	
 	required init?(map: Map) {
 		

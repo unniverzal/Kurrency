@@ -8,16 +8,16 @@
 
 import UIKit
 
-protocol MainRouter : class{
+protocol MainRouter: class {
 	func presentConvertCurrencyViewController()
 }
 
-class MainWireframe: MainRouter{
+class MainWireframe: MainRouter {
 
-    weak var presentedViewController : MainViewController?
-    weak var presenter : MainPresenter!
+    weak var presentedViewController: MainViewController?
+    weak var presenter: MainPresenter!
 
-    func getViewController()-> UIViewController{
+    func getViewController() -> UIViewController {
         let viewController = viewControllerFromStoryboard()
         viewController.eventHandler = presenter
         self.presentedViewController = viewController
@@ -25,20 +25,19 @@ class MainWireframe: MainRouter{
 		return viewController
 	}
     
-    private func viewControllerFromStoryboard() -> MainViewController{
-        
+    private func viewControllerFromStoryboard() -> MainViewController {
         let storyboard = UIStoryboard(name: "MainStoryboard", bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: "Main") as! MainViewController
     }
 	
-	func presentConvertCurrencyViewController(){
+	func presentConvertCurrencyViewController() {
 		let viewController  = CurrencyConverterModuleConfigurator.shared.initialize()
 		viewController.modalTransitionStyle = .crossDissolve
 		viewController.modalPresentationStyle = .overCurrentContext
 		presentedViewController?.present(viewController, animated: true, completion: nil)
 	}
 	
-    deinit{
+    deinit {
         print("MainWireframe DEINIT")
     }
 }

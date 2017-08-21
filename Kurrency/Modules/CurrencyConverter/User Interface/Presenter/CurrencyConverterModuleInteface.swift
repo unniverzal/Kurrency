@@ -14,22 +14,21 @@ protocol CurrencyConverterModuleInterface: class {
 	
 	func convertToButtonTapped()
 	
-	func convertCurrencyButtonTapped(currencyFrom : String? , currencyTo : String? , amountToConvert : String?)
+	func convertCurrencyButtonTapped(currencyFrom: String?, currencyTo: String?, amountToConvert: String?)
 }
 
-extension CurrencyConverterModuleInterface where Self:CurrencyConverterPresenter{
+extension CurrencyConverterModuleInterface where Self: CurrencyConverterPresenter {
     
-    var userInterface : CurrencyConverterViewInterface?{
+    var userInterface: CurrencyConverterViewInterface? {
         
-        if let userInterface = self.viewController as? CurrencyConverterViewInterface{
-            return self.viewController.isViewLoaded ? userInterface : nil
+        if let userInterface = self.viewController as? CurrencyConverterViewInterface {
+            return self.viewController.isViewLoaded ? userInterface: nil
         }
-        
         return nil
     }
 }
 
-protocol CurrenciesModuleInterface : class {
+protocol CurrenciesModuleInterface: class {
 	
 	func currenciesViewLoaded()
 	

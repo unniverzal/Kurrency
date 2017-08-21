@@ -11,27 +11,26 @@ import CoreData
 class CurrencyConverterInteractor: CurrencyConverterInteractorInput {
 
     weak var output: CurrencyConverterInteractorOutput!
-	var currencies : [Currency] = [] {
+	var currencies: [Currency] = [] {
 		didSet{
-			output.set(currencies : currencies.sorted(by: {$0.currencyName < $1.currencyName}))
+			output.set(currencies: currencies.sorted(by: {$0.currencyName < $1.currencyName}))
 		}
 	}
 	
-	init(){
+	init() {
 		requestCurrencies()
 		currencies = CoreDataServices.shared.fetchCurrenciesFromCoreData()
 	}
 	
-	func requestCurrencies(){
-		let params = ["apiKey" : Constants.apiKey]
-		NetworkService.shared.executeRequest(method: .get, url: Constants.currenciesURL,parameters : params,onSucceed: { [weak self](result : Result) in
-			result.results?.forEach({
-				if let value = $0.value as? [String:Any],let id = value["id"] as? String, CoreDataServices.shared.checkIfCurrencyExists(withId: id){
-					let currency = Mapper<Currency>().map(JSON:value)!
+	func requestCurrencies() {
+		let params = ["apiKey": Constants.apiKey]
+		NetworkService.shared.executeRequest(method: .get, url: Constants.currenciesURL, parameters: params, onSucceed: { [weak self] (result: Result) in
+			result.results?.forEach ({
+                guard let value = $0.value as? [String: Any], let id = value["id"] as? String, CoreDataServices.shared.checkIfCurrencyExists(withId: id) else { return }
+					let currency = Mapper<Currency>().map(JSON: value)!
 					self?.currencies.append(currency)
-				}
 			})
-		}) { [weak self](error) in
+		}) { [weak self] error in
 			self?.output.showErroMessage(message: "Failed to fetch Currencies")
 		}
 	}
@@ -40,15 +39,15 @@ class CurrencyConverterInteractor: CurrencyConverterInteractorInput {
 		output.set(currencies: currencies.filter({$0.currencyName!.hasPrefix(text)}).sorted(by: {$0.currencyName < $1.currencyName}))
 	}
 	
-	func convertCurrency(from : String , to : String , amount : String){
-		let params = ["apiKey" : Constants.apiKey,
-		              "compact" : "ultra",
-		              "q":"\(from)_\(to)"]
-		NetworkService.shared.executeRequest(method: .get, url: Constants.convertCurrencyURL, parameters:params, onSucceed: { [weak self](dict) in
-			if let value = dict.first?.value as? Double{
-				self?.output.set(convertedAmount: Double(amount)!*value)
-			}
-		}) { [weak self](error) in
+	func convertCurrency(from: String , to: String , amount: String) {
+		let params = ["apiKey": Constants.apiKey,
+		              "compact": "ultra",
+		              "q": "\(from)_\(to)"]
+		NetworkService.shared.executeRequest(method: .get, url: Constants.convertCurrencyURL, parameters:params, onSucceed: { [weak self] dict in
+            guard let value = dict.first?.value as? Double else { return }
+                //TODO: NumberFormatter
+				self?.output.set(convertedAmount: Double(amount)! * value)
+		}) { [weak self] error in
 			self?.output.showErroMessage(message: "Failed to convert currency")
 		}
 	}
